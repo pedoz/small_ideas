@@ -4,7 +4,6 @@ import re
 
 def main():
     word = get_word()
-    #word agr é uma lista
     print(hangman(word))
 
 
@@ -22,43 +21,54 @@ def get_word():
 
 def hangman(word):
     letters = word
+    count = len(word)
     checker = list()
+    n = 5
+    wrong_l = list()
+    letras_utilizadas = list()
+
     for _ in letters:
         print("_", end=' ')
         checker.append("_")
-    
-    print(checker)
-    print("\n")
-    n = 5
-    while n >= 0:
+    print(checker, end ='\n')
+
+    while True:
+
+        if count == 0:
+            return 'Parabens'
+        
         letra = input("Letra:")
-        print(word)
-        print(letra)
+
         if len(letra) != 1:
             print("Invalido")
-        if letra.isnumeric():
+        elif letra.isnumeric():
             print("Invalido")
+        elif letra == 
         else:
-            try:
-                j = 0
-                for i in range(len(letters)):
-                    if letters[i] == letra:
-                        checker.pop(i)
-                        checker.insert(i, letra)
-                        j = j + 1
-                    if (i + 1) == len(letters) and j == 0:
-                        n = n - 1
-                print(checker)
+            if n == 0:
+                return "Falhou :("
+            else:
+                try:
+                    j = 0
+                    for i in range(len(letters)):
+                        if letters[i] == letra:
+                            count = count - 1
+                            checker.pop(i)
+                            checker.insert(i, letra)
+                            j = j + 1
+                        elif ((i + 1) == len(letters)) and (j == 0):
+                            n = n - 1
+                            wrong_l.append(letra)
+                            print("letras que não tem:", end = ' ')
+                            for i in wrong_l:
+                                print(i, sep = ', ')
 
-            except IndexError:
-                print("erro")
+                    print(checker)
 
-    for i in range(len(checker)):
-        if checker[i] == "_":
-            return "Não conseguiu :("
+                except IndexError:
+                    print("erro")
 
-    else:
-        return "Congrats"
+
 
 
 
