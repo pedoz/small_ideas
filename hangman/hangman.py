@@ -25,7 +25,6 @@ def hangman(word):
     checker = list()
     n = 5
     wrong_l = list()
-    letras_utilizadas = list()
 
     for _ in letters:
         print("_", end=' ')
@@ -36,6 +35,8 @@ def hangman(word):
 
         if count == 0:
             return 'Parabens'
+        if n == 0:
+            return "Falhou :("
         
         letra = input("Letra:")
 
@@ -43,30 +44,32 @@ def hangman(word):
             print("Invalido")
         elif letra.isnumeric():
             print("Invalido")
-        elif letra == 
+        elif letra in checker:
+            print('Letra repetida')
+        elif letra in wrong_l:
+            print('Já não tem essas letras: ', end = '')
+            print(wrong_l)
+
         else:
-            if n == 0:
-                return "Falhou :("
-            else:
-                try:
-                    j = 0
-                    for i in range(len(letters)):
-                        if letters[i] == letra:
-                            count = count - 1
-                            checker.pop(i)
-                            checker.insert(i, letra)
-                            j = j + 1
-                        elif ((i + 1) == len(letters)) and (j == 0):
-                            n = n - 1
-                            wrong_l.append(letra)
-                            print("letras que não tem:", end = ' ')
-                            for i in wrong_l:
-                                print(i, sep = ', ')
+            try:
+                j = 0
+                for i in range(len(letters)):
+                    if letters[i] == letra:
+                        count = count - 1
+                        checker.pop(i)
+                        checker.insert(i, letra)
+                        j = j + 1
+                    elif ((i + 1) == len(letters)) and (j == 0):
+                        n = n - 1
+                        wrong_l.append(letra)
+                        print("letras que não tem:", end = ' ')
+                        for i in wrong_l:
+                            print(i, sep = ', ')
 
-                    print(checker)
+                print(checker)
 
-                except IndexError:
-                    print("erro")
+            except IndexError:
+                print("erro")
 
 
 
