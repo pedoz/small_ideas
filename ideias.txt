@@ -1,0 +1,34 @@
+14. Find out, Fibonacci!
+You input a number and the function created checks whether the number belongs to the Fibonacci sequence or not. The underlying workings are similar to the above ‘Leap it!’ program.
+
+One common theme in all the above projects is that they will help you to get your basics right. You will be the developer and the bug fixer. Not to mention, you’ll be closely working with creating and implementing a variety of functions along with working with variables, strings, integers, operators, etc. Just like 2 + 2 is the building block of your mathematics knowledge, so are these concepts, and learning about them in a fun way through building projects will help to understand and retain them more.
+
+These are some of the most straightforward Python project ideas for you to work on. Once you finish these, let’s move to the next level.
+
+
+16. YouTube video downloader
+
+
+
+One of the best ideas to start experimenting with your hands-on python projects for students is working on a YouTube video downloader. This is the best example of introducing python to beginners in a fun way. More than a billion people watch YouTube every month. Sometimes there are videos we like to download permanently. YouTube doesn’t give you that option, but you can create an app with a simple UI and the ability to download YouTube videos in different formats and video quality. This project looks tough, but it is straightforward when you start working on it.
+
+
+
+18. Calculator
+
+
+Although there isn’t much use for a calculator, however, building your graphical UI calculator will make you familiar with a library like Tkinter in which you can create buttons to perform different operations and display results on a screen.
+
+
+19. Countdown Clock and Timer
+It is another utility app in which the user can set a timer, and the app notifies you when the time is up.
+
+This nifty app helps in furthering knowledge of python coding. It is an intermediary-level project in which the codes will take gather the input corresponding to the length of the countdown within seconds. After receiving the input, the countdown will be initiated and will appear on the screen in “minutes: seconds” format.
+
+
+25. Tic-Tac-Toe
+We all have fond memories of playing Tic-Tac-Toe with our friends in school, don’t we? It is one of the most fun games you can play anywhere – all you need is a pen and paper! Usually, two players can play Tic-Tac-Toe at a time. The players create a 3×3 square grid. This is one of the coolest python project ideas. 
+
+While the first player puts “X” in any one of the squares, and the second player will put an “O” in any square. This process will continue until all the squares are filled with each player putting X and O alternatively. The player who succeeds in creating a horizontal, vertical, or diagonal with three consecutive X or O on the grid wins.
+
+You can use the Pygame library for building this project. Pygame is loaded with all the modules you need for computer graphics and sound.

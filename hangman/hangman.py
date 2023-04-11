@@ -58,7 +58,7 @@ def hangman(word):
             print('')
             return "         Falhou :(\n"
         
-        letra = input("Letra:")
+        letra = input("Letra:").lower()
 
         if len(letra) != 1:
             print("Invalido")
@@ -97,7 +97,7 @@ def hangman(word):
 def get_man(erros_restantes):
     if erros_restantes == 0:
                 return print('''\
-   ______________
+   _______________
    |             |
    |             X
    |            /|\\
@@ -105,7 +105,7 @@ def get_man(erros_restantes):
   /T\\                 ''', end = '')
     elif erros_restantes == 6:
                 return print('''\
-   ______________
+   _______________
    |             |
    |             O
    |            
@@ -113,7 +113,7 @@ def get_man(erros_restantes):
   /T\\                 ''', end = '')
     elif erros_restantes == 5:
                 return print('''\
-   ______________
+   _______________
    |             |
    |             O
    |             |
@@ -121,7 +121,7 @@ def get_man(erros_restantes):
   /T\\                 ''', end = '')
     elif erros_restantes == 4:
                 return print('''\
-   ______________
+   _______________
    |             |
    |             O
    |            /|
@@ -129,7 +129,7 @@ def get_man(erros_restantes):
   /T\\                 ''', end = '')
     elif erros_restantes == 3:
                 return print('''\
-   ______________
+   _______________
    |             |
    |             O
    |            /|\\
@@ -137,7 +137,7 @@ def get_man(erros_restantes):
   /T\\                 ''', end = '')
     elif erros_restantes == 2:
                 return print('''\
-   ______________
+   _______________
    |             |
    |             O
    |            /|\\
@@ -145,7 +145,7 @@ def get_man(erros_restantes):
   /T\\                 ''', end = '')
     elif erros_restantes == 1:
         return print('''\
-   ______________
+   _______________
    |             |
    |             O
    |            /|\\
