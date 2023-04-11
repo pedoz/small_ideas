@@ -34,10 +34,8 @@ def get_word():
         except ValueError:
             print('Por favor, insira um número válido.')
 
-
     sel_word =  random.choice(word_list)
     return list(sel_word)
-
 
 def hangman(word):
     letters = word[:-2]
@@ -51,7 +49,6 @@ def hangman(word):
     print(*checker, sep = ' ')
 
     while True:
-
         if count == 0:
             return 'Parabéns\n'
         if n == 0:
@@ -72,7 +69,6 @@ def hangman(word):
         elif letra.upper() in wrong_l:
             print('Já não tem essas letras: ', end = '')
             print(*wrong_l, sep = ', ')
-
         else:
             try:
                 j = 0
@@ -95,10 +91,8 @@ def hangman(word):
                     print(f"\nletras que não tem:", end = ' ')
                     print(*wrong_l, sep = ', ')
                     print('')
-
             except IndexError:
                 print("erro")
-
 
 def get_man(erros_restantes):
     if erros_restantes == 0:
@@ -157,7 +151,6 @@ def get_man(erros_restantes):
    |            /|\\
    |            / \\
   /T\\                 ''', end = '')
-
 
 
 if __name__ == "__main__":
