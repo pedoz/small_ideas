@@ -8,29 +8,31 @@ def main():
 
 def get_word():
     word_list = []
-    try:
-        nivel = input("Qual a dificuldade? ")
-        if int(nivel) == 0:
-            with open('palavras/alea.csv') as file:
-                for line in file:
-                    word_list.append(line)
-        elif int(nivel) == 1:
-            with open('facil.csv') as file:
-                for line in file:
-                    word_list.append(line)
-        elif int(nivel) == 2:
-            with open('palavras/medio.csv') as file:
-                for line in file:
-                    word_list.append(line)
-        elif int(nivel) == 3:
-            with open('palavras/dificil.csv') as file:
-                for line in file:
-                    word_list.append(line)
-        else:
-            print('Escolha um desses números: 0 - 1 - 2 - 3')
-            get_word()
-    except EOFError:
-        get_word()
+    while True:
+        try:
+            nivel = input("Qual a dificuldade? ")
+            if int(nivel) == 0:
+                with open('palavras/alea.csv') as file:
+                    for line in file:
+                        word_list.append(line)
+            elif int(nivel) == 1:
+                with open('palavras/facil.csv') as file:
+                    for line in file:
+                        word_list.append(line)
+            elif int(nivel) == 2:
+                with open('palavras/medio.csv') as file:
+                    for line in file:
+                        word_list.append(line)
+            elif int(nivel) == 3:
+                with open('palavras/dificil.csv') as file:
+                    for line in file:
+                        word_list.append(line)
+            else:
+                print('Escolha um desses números: 0 - 1 - 2 - 3')
+                continue
+            break
+        except ValueError:
+            print('Por favor, insira um número válido.')
 
 
     sel_word =  random.choice(word_list)
@@ -38,8 +40,8 @@ def get_word():
 
 
 def hangman(word):
-    letters = word
-    count = len(word)
+    letters = word[:-2]
+    count = len(word[:-2])
     checker = list()
     n = 6
     wrong_l = list()
@@ -51,11 +53,13 @@ def hangman(word):
     while True:
 
         if count == 0:
-            return 'Parabéns'
+            return 'Parabéns\n'
         if n == 0:
             get_man(n)
-            print(word.upper())
-            return "Falhou :("
+            for x in letters:
+                print(x.upper(), end = ' ')
+            print('')
+            return "         Falhou :(\n"
         
         letra = input("Letra:")
 
@@ -65,7 +69,7 @@ def hangman(word):
             print("Invalido")
         elif letra.upper() in checker:
             print('Letra repetida')
-        elif letra in wrong_l:
+        elif letra.upper() in wrong_l:
             print('Já não tem essas letras: ', end = '')
             print(*wrong_l, sep = ', ')
 
@@ -80,7 +84,7 @@ def hangman(word):
                         j = j + 1
                     elif ((i + 1) == len(letters)) and (j == 0):
                         n = n - 1
-                        wrong_l.append(letra)
+                        wrong_l.append(letra.upper())
                         print(f"\nletras que não tem:", end = ' ')
                         print(*wrong_l, sep = ', ')
                 if n == 0:
@@ -88,6 +92,8 @@ def hangman(word):
                 else:
                     get_man(n)
                     print(*checker, sep = ' ')
+                    print(f"\nletras que não tem:", end = ' ')
+                    print(*wrong_l, sep = ', ')
                     print('')
 
             except IndexError:
