@@ -1,0 +1,5 @@
+- adicionar a opção de escolher o símbolo
+
+-tentar resumir o código, ou achar outra maniera de escrever a condição de vitória
+
+-re-verificar o código, e jogar mais algumas vezes para testar possiveis bugs
