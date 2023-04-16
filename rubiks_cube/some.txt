@@ -1,0 +1,80 @@
+hey chat, good morning, i have some questions regarding python.
+The first one, is it possible to make a "rubik's" cube in it?
+the second, is it possible, in python, to create an "AI"(more like an algorithm) to solve the cube?
+
+
+----------------
+
+Good morning! Yes, it is indeed possible to create a virtual representation of a Rubik's cube using Python.
+ You can create a data structure to represent the state of the cube, and then write code to manipulate and update the
+  state based on different moves such as rotations of the faces.
+
+As for creating an algorithm to solve the Rubik's cube using Python, yes, it is also possible. There are several
+ well-known algorithms for solving the Rubik's cube, such as the Layer-by-Layer (LBL) method, the Fridrich method, 
+ and the Kociemba method, which involve a series of predefined moves and rules to solve the cube.
+
+You can implement these algorithms in Python by defining the necessary data structures and operations to represent the 
+Rubik's cube, and then coding the solving algorithm based on the chosen method. This may involve techniques such as searching, 
+backtracking, and heuristic-based approaches.
+
+It's worth noting that solving the Rubik's cube using an algorithm can be quite complex and challenging, especially 
+for more advanced methods. However, with a good understanding of the cube's mechanics and some programming skills in Python, 
+it is definitely possible to create a Rubik's cube and an algorithm to solve it.
+
+
+_________________________________________
+
+Luiz Pedó
+so, you consider hard? i'm sort of new in programming, dont want to challange me so much to the point where i get down
+with it, but i really like the idea of making that
+---------
+
+Implementing a Rubik's cube and an algorithm to solve it can be challenging, especially if you are new to programming.
+The Rubik's cube has a complex structure with many possible states, and solving it requires a good understanding of the cube's
+mechanics, as well as proficiency in programming concepts such as data structures, algorithms, and logic.
+
+However, it is important to note that you can start with a simple implementation and gradually increase the complexity
+as you gain more experience and confidence in your programming skills. You can start by building a basic representation
+of the Rubik's cube with a few moves and a simple solving algorithm, and then gradually expand and optimize your code as you 
+learn more.
+
+There are also many resources available online, including tutorials, documentation, and sample code, that can help you
+understand the concepts and techniques required to implement a Rubik's cube and a solving algorithm in Python. Taking a 
+step-by-step approach and being patient with yourself can make the process more manageable and enjoyable.
+
+So while it may be challenging, it is certainly achievable with dedication and perseverance. Just be prepared to invest 
+time and effort into learning and practicing programming concepts, and don't hesitate to seek help from online resources or 
+communities if you encounter difficulties. Good luck, and have fun exploring the world of programming with Python!
+____________________________________________________________
+
+
+
+Luiz Pedó
+should i use pygame to make the rubiks cube? or there is another python library that is easier to make that?
+----------
+
+
+While Pygame is a popular library for creating 2D games and graphical applications in Python, 
+it may not be the most natural choice for implementing a Rubik's cube due to the 3D nature of the cube and the need 
+for interactive 3D graphics.
+
+There are other Python libraries that are specifically designed for 3D graphics and simulations,
+which may be more suitable for creating a Rubik's cube.
+Here are a few options:
+
+PyOpenGL: PyOpenGL is a Python wrapper for the OpenGL graphics library, 
+which provides a powerful and flexible framework for creating 3D graphics in Python. 
+It allows you to create and manipulate 3D objects, apply textures and lighting, and handle user input for 
+interactive applications.
+
+Pyglet: Pyglet is another Python library for creating games and multimedia applications that 
+includes support for 3D graphics. It provides an easy-to-use interface for creating 3D scenes, handling user input, 
+and managing animations.
+
+VTK (Visualization Toolkit): VTK is a powerful and widely used library for scientific visualization and 3D graphics. 
+It provides a wide range of functionality for creating complex 3D scenes, including rendering, texturing, and user interaction.
+
+These libraries may have steeper learning curves compared to Pygame, but they provide more advanced capabilities 
+for working with 3D graphics, which can be helpful when implementing a Rubik's cube. However, if you prefer to stick 
+with Pygame, you can still create a Rubik's cube in 2D, using a top-down view or a simplified representation of the cube, 
+depending on your project's requirements and complexity.
